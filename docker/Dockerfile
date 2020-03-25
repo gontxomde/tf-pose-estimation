@@ -10,4 +10,4 @@ RUN git clone https://github.com/gontxomde/tf-pose-estimation.git \
 && pip install Cython \
 && pip install -e .
 
-RUN python /tf-pose-estimation/run.py
+#RUN python /tf-pose-estimation/run.py
