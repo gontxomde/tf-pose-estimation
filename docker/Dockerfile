@@ -5,7 +5,9 @@ RUN apt-get update && apt-get install -y git && pip install --upgrade pip
 RUN apt-get install -y libsm6 libxext6 libxrender-dev \
 && pip install opencv-python && apt-get update && apt-get install -y vim
 
-RUN git clone https://github.com/gontxomde/tf-pose-estimation.git \
+ADD http://www.convert-unix-time.com/api?timestamp=now /tmp/bustcache
+
+RUN git clone --depth 1 https://github.com/gontxomde/tf-pose-estimation.git \
 && cd tf-pose-estimation \
 && pip install Cython \
 && pip install -e .
