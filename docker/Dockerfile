@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y git && pip install --upgrade pip
 RUN apt-get install -y libsm6 libxext6 libxrender-dev \
 && pip install opencv-python && apt-get update && apt-get install -y vim
 
-ADD http://www.convert-unix-time.com/api?timestamp=now /tmp/bustcache
+ADD https://showcase.linx.twenty57.net:8081/UnixTime/tounixtimestamp?datetime=now /tmp/bustcache
 
 RUN git clone --depth 1 https://github.com/gontxomde/tf-pose-estimation.git \
 && cd tf-pose-estimation \
